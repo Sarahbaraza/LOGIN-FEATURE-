@@ -1,16 +1,23 @@
 <!doctype html>
-<html>
-<head><meta charset="utf-8"><title>Dashboard</title></head>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Dashboard</title>
+</head>
 <body>
   <h1>Dashboard</h1>
   <p>Welcome — you are logged in.</p>
   <button id="logout">Logout</button>
+
   <script>
     document.getElementById('logout').addEventListener('click', () => {
+      // Clear stored lock/attempts
       localStorage.removeItem('failed_attempts');
       localStorage.removeItem('login_lock');
-      window.location.href = '/';
+      // Go back to the login page in the same folder
+      window.location.href = 'index.html';
     });
   </script>
 </body>
 </html>
+

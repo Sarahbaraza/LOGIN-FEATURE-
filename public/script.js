@@ -1,5 +1,5 @@
-const VALID_EMAIL = 'test@example.com';
-const VALID_PASSWORD = 'Password123';
+const VALID_EMAIL = 'sarahbaraza66@gmail.com';
+const VALID_PASSWORD = 'Password123!';
 
 const LOCK_KEY = 'login_lock';
 const FAIL_KEY = 'failed_attempts';
@@ -36,13 +36,16 @@ form.addEventListener('submit', (e) => {
   const email = emailInput.value.trim();
   const pwd = pwdInput.value;
 
+  console.log('Typed email:', JSON.stringify(email));
+  console.log('Typed password:', JSON.stringify(pwd));
+
   if (pwd.length < 8) {
     return showError('Password must be at least 8 characters.');
   }
 
   if (email === VALID_EMAIL && pwd === VALID_PASSWORD) {
     clearLockAndFailed();
-    window.location.href = '/dashboard.html';
+    window.location.href = 'dashboard.html'; // fixed path
   } else {
     const fails = getFailed() + 1;
     setFailed(fails);
@@ -54,3 +57,4 @@ form.addEventListener('submit', (e) => {
     }
   }
 });
+
