@@ -1,0 +1,22 @@
+body {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+}
+label {
+  margin-top: 1rem;
+}
+#errorMsg {
+  color: red;
+  margin-top: 0.5rem;
+}
+button {
+  margin-top: 1.5rem;
+  padding: 0.5rem;
+}

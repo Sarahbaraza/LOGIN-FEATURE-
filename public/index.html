@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <h1>Sign in</h1>
+    <form id="loginForm" autocomplete="off">
+      <label for="email">Email</label>
+      <input id="email" type="email" required />
+
+      <label for="password">Password</label>
+      <input id="password" type="password" required minlength="8" />
+
+      <div id="errorMsg" role="alert" aria-live="polite"></div>
+
+      <button id="loginBtn" type="submit">Login</button>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
